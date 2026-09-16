@@ -8,7 +8,7 @@ function App() {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     // alert('Phase 1: UI only. No backend connection yet.')
-    if (!meetingTitle || !transcript) {
+    if (!meetingTitle.trim() || !transcript.trim()) {
       setError('Please fill in both the meeting title and transcript.')
       return
     }
